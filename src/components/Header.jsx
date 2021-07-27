@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 // IMPORTS
 import logo from "../assets/logo.svg";
+import emptyPopup from "../assets/emptyPopup.svg";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
+	const [popUp, setPopUp] = useState(false);
 	return (
 		<>
 			{/* UPPER TOP HEADER START */}
@@ -66,9 +68,18 @@ const Header = () => {
 										</svg>
 									</div>
 								</div>
-								<button className="btnBg border-0 py-2 text-white px-4 small d-flex align-items-center justify-content-center rounded-3 ms-2">
+								<button
+									onClick={() => setPopUp(!popUp)}
+									className="position-relative btnBg border-0 py-2 text-white px-4 small d-flex align-items-center justify-content-center rounded-3 ms-2"
+								>
 									<div className="mt-1">R0.00</div>
 									<HiOutlineShoppingBag className="ms-1" />
+
+									{popUp && (
+										<div className="pop_up">
+											<img src={emptyPopup} alt="" />
+										</div>
+									)}
 								</button>
 							</div>
 						</div>
@@ -85,9 +96,18 @@ const Header = () => {
 									</div>
 								</div>
 								<div>
-									<button className="btnBg border-0 py-1 text-white px-3 small d-flex align-items-center justify-content-center rounded-3 ms-2">
+									<button
+										onClick={() => setPopUp(!popUp)}
+										className="position-relative btnBg border-0 py-1 text-white px-3 small d-flex align-items-center justify-content-center rounded-3 ms-2"
+									>
 										<div className="mt-1">R0.00</div>
 										<HiOutlineShoppingBag className="ms-1" />
+
+										{popUp && (
+											<div className="pop_up">
+												<img src={emptyPopup} alt="" />
+											</div>
+										)}
 									</button>
 								</div>
 							</div>

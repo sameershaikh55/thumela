@@ -65,7 +65,7 @@ html {
 }
 
 .blueC {
-  color: #4285f4;
+  color: #4285f4 !important;
 }
 
 .darkBlueC {
@@ -147,6 +147,13 @@ html {
 .header_containerM .logo_cont img {
   width: 120px;
   height: auto;
+}
+
+.pop_up {
+  position: absolute;
+  right: 0%;
+  top: 100%;
+  z-index: 2;
 }
 
 .hero_section .bg_circle {
@@ -241,6 +248,7 @@ html {
 .hampers_container .hamper_card .aocBtn {
   font-size: 0.75rem;
   background: #e0efff;
+  height: 40px;
 }
 
 .hampers_container .hamper_card .quantity_cont {
@@ -321,6 +329,12 @@ html {
 .feature_container .hamper_card .aocBtn {
   font-size: 0.75rem;
   background: #e0efff;
+  height: 40px;
+}
+
+.feature_container .hamper_card .aocBtn.btnFilled {
+  background-color: #2372fd;
+  color: #fff;
 }
 
 .feature_container .hamper_card .quantity_cont {
@@ -409,6 +423,101 @@ html {
   background: #f4f7f87e;
 }
 
+.shop_container {
+  background: #ccdde425;
+  margin-top: 8rem;
+  padding: 5rem 0rem;
+}
+
+.shop_container .shop_card img {
+  height: 85px;
+}
+
+.shop_container .shop_card h4 {
+  line-height: 130%;
+}
+
+.shop_container .shop_card .desc_cont {
+  width: 75%;
+  margin-top: 2rem;
+}
+
+.shop_container .shop_card .desc_cont p {
+  line-height: 22px;
+}
+
+.customer_container {
+  background: url(../assets/customer.svg);
+  width: 100%;
+  height: 100%;
+  padding: 6rem 0rem;
+}
+
+.customer_container .inner_customer {
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 3rem 3rem 4rem 4rem;
+}
+
+.customer_container .inner_customer h1 {
+  font-size: 3rem;
+  line-height: 46px;
+}
+
+.customer_container .inner_customer h3 {
+  line-height: 110%;
+  color: #4a5568;
+  font-size: 1.875rem;
+}
+
+.customer_container .inner_customer button {
+  width: 305px;
+  height: 62px;
+  border-radius: 4px;
+}
+
+.CTA_container {
+  background: #ccdde46e;
+}
+
+.CTA_container h5 {
+  color: #45626f;
+  line-height: 132%;
+}
+
+.footer_container {
+  background-color: #fff;
+  padding: 4rem 0rem 5rem;
+}
+
+.footer_container h6 {
+  color: #001d4f;
+}
+
+.footer_container li a {
+  color: #304650;
+}
+
+.footer_container .contact_cont img {
+  width: 25px;
+  height: 100%;
+}
+
+.underFooter_container {
+  background: #45626f;
+  height: 32px;
+}
+
+.underFooter_container img {
+  width: 35px;
+  height: auto;
+}
+
 @media screen and (max-width: 998px) {
   .hero_section img {
     width: 100%;
@@ -444,6 +553,28 @@ html {
   .hero_section .bg_circle {
     width: 100%;
   }
+  .customer_container .inner_customer h1 {
+    font-size: 2rem;
+    line-height: 38px;
+  }
+  .customer_container .inner_customer h3 {
+    font-size: 1.5rem;
+  }
+  .customer_container .inner_customer button {
+    width: 100%;
+  }
+  .customer_container .inner_customer {
+    padding: 3rem 1rem 3rem 1rem;
+  }
+  .shop_container h1 {
+    font-size: 2.25rem;
+  }
+  .shop_container .shop_card h4 {
+    font-size: 1.125rem;
+  }
+  .shop_container .shop_card .desc_cont {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -459,6 +590,9 @@ html {
   .hampers_container .slick-dots li button:before,
   .feature_container .slick-dots li button:before {
     font-size: 10px;
+  }
+  .underFooter_container {
+    height: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

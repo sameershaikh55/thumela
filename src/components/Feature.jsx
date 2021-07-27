@@ -3,6 +3,7 @@ import React from "react";
 // IMPORTS
 import product from "../assets/product.svg";
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { BsCheck } from "react-icons/bs";
 import Slider from "react-slick";
 
 const Feature = () => {
@@ -27,7 +28,7 @@ const Feature = () => {
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 2,
-					slidesToScroll: 1,
+					slidesToScroll: 2,
 					infinite: true,
 					arrows: false,
 				},
@@ -82,7 +83,7 @@ const Feature = () => {
 														</p>
 
 														<div className="d-flex flex-column flex-sm-row justify-content-sm-between align-items-center">
-															<div className="quantity_cont">
+															<div className="quantity_cont w-100">
 																<button className="border-0 bg-transparent">
 																	<AiOutlineMinus />
 																</button>
@@ -98,9 +99,19 @@ const Feature = () => {
 																</button>
 															</div>
 															<div className="w-100 mt-2 mt-sm-0">
-																<button className="w-100 aocBtn border-0 middleBlueC py-2 rounded-3 fw-bold">
-																	Add to cart
-																</button>
+																{(i === 0 && (
+																	<button className="w-100 aocBtn btnFilled border-0 middleBlueC rounded-3 fw-bold d-flex justify-content-center align-items-center">
+																		<BsCheck
+																			className="me-1"
+																			fontSize="1.2rem"
+																		/>{" "}
+																		Added
+																	</button>
+																)) || (
+																	<button className="w-100 aocBtn border-0 middleBlueC py-2 rounded-3 fw-bold">
+																		Add to cart
+																	</button>
+																)}
 															</div>
 														</div>
 													</div>
