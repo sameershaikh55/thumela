@@ -79,6 +79,14 @@ html {
 	font-weight: 600;
 }
 
+.dGreenC {
+	color: #1d5f3d;
+}
+
+.lighthCColor {
+	color: #304650;
+}
+
 .bottomLine {
 	border-bottom: 3px solid #80b1ff;
 }
@@ -89,7 +97,6 @@ html {
 	background: #f4f7f8;
 	height: 32px;
 }
-
 // UPPER TOP HEADER END
 
 // UNDER HEADER START
@@ -165,14 +172,222 @@ html {
 	background: url(../assets/categoryBg.svg);
 	height: 100%;
 	width: 100%;
-	background-repeat: no-repeat;
 	padding: 5rem 0rem;
 
 	h1 {
 		font-size: 3rem;
 	}
+
+	.innerSlideCont {
+		padding: 12px;
+
+		h6 {
+			color: #304650;
+			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06),
+				0px 1px 3px rgba(0, 0, 0, 0.1);
+		}
+	}
 }
 // CATEGORY SECTION END
+
+// HAMPERS SECTION START
+.hampers_container {
+	margin-top: 4rem;
+
+	.hamper_card {
+		border: 1px solid #ccdde485;
+
+		.greenBgStar {
+			background: #e2fbef;
+			border-radius: 100px;
+			font-size: 0.75rem;
+		}
+
+		.h_name {
+			line-height: 130%;
+		}
+
+		.cut_tag {
+			font-size: 0.75rem;
+		}
+
+		input {
+			box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.06);
+			width: 24px;
+			height: 24px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		/* Chrome, Safari, Edge, Opera */
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		/* Firefox */
+		input[type="number"] {
+			-moz-appearance: textfield;
+		}
+
+		.aocBtn {
+			font-size: 0.75rem;
+			background: #e0efff;
+		}
+
+		.quantity_cont {
+			width: 180px;
+		}
+	}
+
+	.slick-slide {
+		padding: 0 12px;
+		// width: 270px !important;
+	}
+
+	.slick-dots {
+		bottom: -30px;
+	}
+	.slick-dots li {
+		margin: 0px;
+	}
+	.slick-dots li button:before {
+		color: #0645b2;
+	}
+	.slick-dots li button:before {
+		font-size: 12px;
+	}
+}
+// HAMPERS SECTION END
+
+// FEATURE SECTION START\
+.feature_containerMain {
+	margin-top: 5rem;
+}
+
+.feature_container {
+	max-width: 1175px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.hamper_card {
+		border: 1px solid #ccdde485;
+
+		.greenBgStar {
+			background: #e2fbef;
+			border-radius: 100px;
+			font-size: 0.75rem;
+		}
+
+		.h_name {
+			line-height: 130%;
+		}
+
+		.cut_tag {
+			font-size: 0.75rem;
+		}
+
+		input {
+			box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.06);
+			width: 24px;
+			height: 24px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		/* Chrome, Safari, Edge, Opera */
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		/* Firefox */
+		input[type="number"] {
+			-moz-appearance: textfield;
+		}
+
+		.aocBtn {
+			font-size: 0.75rem;
+			background: #e0efff;
+		}
+
+		.quantity_cont {
+			width: 180px;
+		}
+	}
+
+	.slick-slide {
+		padding: 0 12px;
+	}
+
+	.slick-prev,
+	.slick-next {
+		background: #d7fdff;
+		box-shadow: 1px 1px 10px #cecece;
+		height: 40px;
+		width: 30px;
+	}
+
+	.slick-prev {
+		left: -5px;
+		z-index: 2;
+	}
+
+	.slick-next {
+		right: -5px;
+	}
+
+	.slick-prev:before {
+		display: block;
+		content: " ";
+		background-image: url("../assets/left.svg");
+		background-size: 28px 28px;
+		height: 28px;
+		width: 28px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.slick-next:before {
+		display: block;
+		content: " ";
+		background-image: url("../assets/right.svg");
+		background-size: 28px 28px;
+		height: 28px;
+		width: 28px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.slick-dots {
+		bottom: -40px;
+	}
+	.slick-dots li {
+		margin: 0px;
+	}
+	.slick-dots li button:before {
+		color: #0645b2;
+	}
+	.slick-dots li.slick-active button:before {
+		color: #0645b2;
+	}
+
+	.slick-dots li button:before {
+		font-size: 12px;
+	}
+
+	.card_body {
+		background: #f4f7f87e;
+	}
+}
+// FEATURE SECTION END
 
 // MEDIA QUERIES START
 @media screen and (max-width: 998px) {
@@ -203,17 +418,35 @@ html {
 	.category_container {
 		background: url(../assets/categoryM.svg);
 		height: 100%;
-		width: 100%;
-		background-repeat: no-repeat;
+		width: 100vw;
 		padding: 5rem 0rem;
 
 		h1 {
 			font-size: 2.25rem;
 		}
 	}
+	.hero_section {
+		.bg_circle {
+			width: 100%;
+		}
+	}
 }
 
 @media screen and (max-width: 575px) {
+	.feature_container {
+		.slick-slide img {
+			width: 40%;
+		}
+	}
+	.feature_container .hamper_card .quantity_cont {
+		width: 100%;
+	}
+	.feature_container .slick-dots {
+		bottom: -30px;
+	}
+	.hampers_container .slick-dots li button:before,
+	.feature_container .slick-dots li button:before {
+		font-size: 10px;
+	}
 }
-
 // MEDIA QUERIES END
