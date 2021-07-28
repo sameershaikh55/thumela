@@ -90,7 +90,100 @@ html {
 .bottomLine {
 	border-bottom: 3px solid #80b1ff;
 }
+
+.sidebarActive {
+	transition: 0.8s;
+	position: relative;
+
+	&:before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.4);
+		position: absolute;
+		top: 0%;
+		bottom: 0%;
+		left: 0%;
+		right: 0%;
+		z-index: 1;
+		transition: 0.8s;
+	}
+}
 // GLOBAL CLASSES END
+
+/* ==================== SideBAR STYLING END ======================== */
+.SideBarContainer {
+	position: fixed;
+	right: 0%;
+	bottom: 0%;
+	color: white;
+	font-size: 1.3rem;
+	background-color: #fff;
+	height: 100vh;
+	z-index: 11111;
+	width: 50%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	transition: 0.5s;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.219);
+
+	.logo {
+		position: absolute;
+		top: 2.1%;
+		left: 18%;
+
+		img {
+			width: 120px;
+		}
+	}
+}
+
+.SideBarContainer ul {
+	margin-top: 5rem;
+	padding-left: 1rem;
+	padding-right: 1.4rem;
+}
+
+.SideBarContainer ul li {
+	position: relative;
+	list-style: none;
+	margin-bottom: 0.1rem;
+	cursor: pointer;
+	padding: 0.4rem 0rem;
+
+	a {
+		color: #000;
+		text-decoration: none;
+		position: relative;
+		padding-bottom: 5px;
+	}
+
+	// .activeNav::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	left: 0%;
+	// 	bottom: 0%;
+	// 	height: 10%;
+	// 	width: 100%;
+	// 	background-color: #007bbc;
+	// 	border-radius: 5px;
+	// }
+}
+
+.loginBtn {
+	background: #2372fd;
+	width: 100%;
+}
+
+.CrossBTn {
+	position: absolute;
+	top: 3.1%;
+	left: 7.4%;
+	cursor: pointer;
+	font-size: 0.9rem;
+	color: rgb(6, 69, 178);
+}
+/* ==================== SideBAR STYLING END ======================== */
 
 // UPPER TOP HEADER START
 .upper_header {
@@ -432,10 +525,27 @@ html {
 
 // CUSTOMER SECTION START
 .customer_container {
-	background: url(../assets/customer.svg);
+	background: url(../assets/serveBg.png);
 	width: 100%;
 	height: 100%;
 	padding: 6rem 0rem;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&:before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: rgb(6, 69, 178);
+		position: absolute;
+		top: 0%;
+		bottom: 0%;
+		left: 0%;
+		right: 0%;
+		z-index: -1;
+	}
 
 	.inner_customer {
 		max-width: 1020px;

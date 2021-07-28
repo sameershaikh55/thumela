@@ -7,7 +7,7 @@ import emptyPopup from "../assets/emptyPopup.svg";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const Header = () => {
+const Header = ({ ClickEvent }) => {
 	const [popUp, setPopUp] = useState(false);
 	return (
 		<>

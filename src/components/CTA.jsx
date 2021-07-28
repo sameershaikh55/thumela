@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const CTA = () => {
 	return (
-		<div className="CTA_container py-4 mt-0 mt-md-3">
+		<div className="CTA_container py-4">
 			<div className="page_container">
 				<div className="container-fluid text-center">
 					<h5 className="mb-0">

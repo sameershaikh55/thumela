@@ -1,7 +1,7 @@
 import React from "react";
 
 // IMPORTS
-import hero from "../assets/hero.svg";
+import { hero } from "../assets/image.js";
 import heroCricle from "../assets/heroCricle.svg";
 import heroM from "../assets/heroM.svg";
 

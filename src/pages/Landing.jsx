@@ -10,19 +10,26 @@ import Shop from "../components/Shop";
 import Customer from "../components/Customer";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
+import Sidebar from "../components/Sidebar";
+import { useHooks } from "../Hooks/useHooks";
 
 const Landing = () => {
+	const { isOpen, OnClick } = useHooks();
+
 	return (
 		<>
-			<Header />
-			<Hero />
-			<Category />
-			<Hampers />
-			<Feature />
-			<Shop />
-			<Customer />
-			<CTA />
-			<Footer />
+			<Sidebar ClickEvent={OnClick} isOpen={isOpen} />
+			<div className={`${isOpen && "sidebarActive"}`}>
+				<Header ClickEvent={OnClick} />
+				<Hero />
+				<Category />
+				<Hampers />
+				<Feature />
+				<Shop />
+				<Customer />
+				<CTA />
+				<Footer />
+			</div>
 		</>
 	);
 };
