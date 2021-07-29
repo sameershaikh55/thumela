@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // IMPORTING COMPONENTS
 import Header from "../components/Header";
@@ -15,20 +15,29 @@ import { useHooks } from "../Hooks/useHooks";
 
 const Landing = () => {
 	const { isOpen, OnClick } = useHooks();
+	const [sidebar, setSidebar] = useState(false);
 
 	return (
 		<>
 			<Sidebar ClickEvent={OnClick} isOpen={isOpen} />
 			<div className={`${isOpen && "sidebarActive"}`}>
-				<Header ClickEvent={OnClick} />
-				<Hero />
-				<Category />
-				<Hampers />
-				<Feature />
-				<Shop />
-				<Customer />
-				<CTA />
-				<Footer />
+				<Header
+					sidebar={sidebar}
+					setSidebar={setSidebar}
+					ClickEvent={OnClick}
+				/>
+				{!sidebar && (
+					<>
+						<Hero />
+						<Category />
+						<Hampers />
+						<Feature />
+						<Shop />
+						<Customer />
+						<CTA />
+						<Footer />
+					</>
+				)}
 			</div>
 		</>
 	);

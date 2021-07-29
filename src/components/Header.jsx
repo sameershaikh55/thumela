@@ -6,9 +6,11 @@ import logo from "../assets/logo.svg";
 import emptyPopup from "../assets/emptyPopup.svg";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
+import cross from "../assets/crossS.svg";
 
-const Header = ({ ClickEvent }) => {
+const Header = ({ ClickEvent, sidebar, setSidebar }) => {
 	const [popUp, setPopUp] = useState(false);
+
 	return (
 		<>
 			{/* UPPER TOP HEADER START */}
@@ -34,7 +36,11 @@ const Header = ({ ClickEvent }) => {
 			{/* UPPER TOP HEADER END */}
 
 			{/* UNDER HEADER START */}
-			<div className="header_container bg-white pt-3 pb-1 py-md-4">
+			<div
+				className={`header_container ${
+					sidebar && "activeSideMbar"
+				} pt-3 pb-1 py-md-4`}
+			>
 				<div className="page_container">
 					<div className="container-fluid">
 						<div className="d-none d-md-flex justify-content-between align-items-center">
@@ -69,27 +75,42 @@ const Header = ({ ClickEvent }) => {
 									</div>
 								</div>
 								<button
-									onClick={() => setPopUp(!popUp)}
+									// onClick={() => setPopUp(!popUp)}
+									onClick={ClickEvent}
 									className="position-relative btnBg border-0 py-2 text-white px-4 small d-flex align-items-center justify-content-center rounded-3 ms-2"
 								>
 									<div className="mt-1">R0.00</div>
 									<HiOutlineShoppingBag className="ms-1" />
 
-									{popUp && (
+									{/* {popUp && (
 										<div className="pop_up">
 											<img src={emptyPopup} alt="" />
 										</div>
-									)}
+									)} */}
 								</button>
 							</div>
 						</div>
 
 						{/* MOBILE SCREEN START */}
-						<div className="header_containerM d-block d-md-none">
+						<div className="header_containerM bg-whit d-block d-md-none">
 							<div className="d-flex justify-content-between">
 								<div className="d-flex align-items-center">
 									<div className="me-2">
-										<GiHamburgerMenu fontSize="1.2rem" color="#0645B2" />
+										{(!sidebar && (
+											<GiHamburgerMenu
+												onClick={() => setSidebar(true)}
+												fontSize="1.2rem"
+												color="#0645B2"
+											/>
+										)) || (
+											<img
+												style={{ marginRight: "6px" }}
+												onClick={() => setSidebar(false)}
+												src={cross}
+												alt="cross"
+												className="pointer"
+											/>
+										)}
 									</div>
 									<div className="logo_cont">
 										<img src={logo} alt="" />
@@ -97,17 +118,17 @@ const Header = ({ ClickEvent }) => {
 								</div>
 								<div>
 									<button
-										onClick={() => setPopUp(!popUp)}
+										// onClick={() => setPopUp(!popUp)}
+										onClick={ClickEvent}
 										className="position-relative btnBg border-0 py-1 text-white px-3 small d-flex align-items-center justify-content-center rounded-3 ms-2"
 									>
 										<div className="mt-1">R0.00</div>
 										<HiOutlineShoppingBag className="ms-1" />
-
-										{popUp && (
+										{/* {popUp && (
 											<div className="pop_up">
 												<img src={emptyPopup} alt="" />
 											</div>
-										)}
+										)} */}
 									</button>
 								</div>
 							</div>
@@ -168,6 +189,33 @@ const Header = ({ ClickEvent }) => {
 								Drinks
 							</NavLink>
 						</div>
+
+						{sidebar && (
+							<div onClick={() => setSidebar(false)}>
+								<hr className="mt-1 mb-3" />
+								<ul className="list-unstyled">
+									<li className="py-3 ps-3 pointer grayC">
+										<NavLink className="grayC text-decoration-none" to="/">
+											My Account
+										</NavLink>
+									</li>
+									<li className="py-3 ps-3 pointer grayC activeSidebar">
+										<NavLink className="grayC text-decoration-none" to="/">
+											Invoices
+										</NavLink>
+									</li>
+									<li className="py-3 ps-3 pointer grayC">
+										<NavLink className="grayC text-decoration-none" to="/">
+											Page name
+										</NavLink>
+									</li>
+								</ul>
+								<hr className="mt-0 mb-3" />
+								<button className="bg-transparent border-0 mb-4 grayC ps-3">
+									Logout
+								</button>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
