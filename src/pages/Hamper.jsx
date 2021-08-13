@@ -13,7 +13,7 @@ const Hamper = () => {
 
 	return (
 		<>
-			<div className="bg-page"></div>
+			<div className="bg-page2"></div>
 			<Sidebar ClickEvent={OnClick} isOpen={isOpen} />
 			<div className={`${isOpen && "sidebarActive"}`}>
 				<Header

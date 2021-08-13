@@ -794,6 +794,14 @@ html {
   z-index: -1;
 }
 
+.bg-page2 {
+  position: absolute;
+  background: #f4f9fe;
+  height: 1800px;
+  width: 100%;
+  z-index: -1;
+}
+
 .my_order_body {
   height: 920px;
   z-index: -2;
@@ -1204,6 +1212,9 @@ html {
     height: 1970px;
     z-index: -2;
   }
+  .bg-page2 {
+    height: 2200px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1307,7 +1318,9 @@ html {
   .basketitems_container.checkout .payment_continue button {
     width: 100%;
   }
-  .imageGalleryContainer .image-gallery-content:not(.fullscreen):not(.fullscreen) .image-gallery-image {
+  .imageGalleryContainer
+.image-gallery-content:not(.fullscreen):not(.fullscreen)
+.image-gallery-image {
     height: 250px;
   }
 }
