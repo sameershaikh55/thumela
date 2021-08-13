@@ -6,6 +6,7 @@ import logo from "../assets/logo.svg";
 import emptyPopup from "../assets/emptyPopup.svg";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoIosArrowDown } from "react-icons/io";
 import cross from "../assets/crossS.svg";
 
 const Header = ({ ClickEvent, sidebar, setSidebar }) => {
@@ -19,16 +20,14 @@ const Header = ({ ClickEvent, sidebar, setSidebar }) => {
 					<div className="container-fluid">
 						<div className="d-flex justify-content-end">
 							<NavLink className="text-decoration-none me-5 grayC" to="">
+								My Orders
+							</NavLink>
+							<NavLink className="text-decoration-none me-5 grayC" to="">
 								Help Centre
 							</NavLink>
-							<div>
-								<NavLink className="text-decoration-none blueC" to="">
-									Login |{" "}
-								</NavLink>
-								<NavLink className="text-decoration-none blueC" to="">
-									Signup
-								</NavLink>
-							</div>
+							<NavLink className="text-decoration-none grayC" to="">
+								My Account <IoIosArrowDown className="blueC" />
+							</NavLink>
 						</div>
 					</div>
 				</div>

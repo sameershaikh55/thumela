@@ -12,6 +12,8 @@ import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar";
 import { useHooks } from "../Hooks/useHooks";
+import Bakery from "../components/Bakery";
+import Recommend from "../components/Recommended";
 
 const Landing = () => {
 	const { isOpen, OnClick } = useHooks();
@@ -29,11 +31,10 @@ const Landing = () => {
 				{!sidebar && (
 					<>
 						<Hero />
-						<Category />
 						<Hampers />
 						<Feature />
-						<Shop />
-						<Customer />
+						<Bakery />
+						<Recommend />
 						<CTA />
 						<Footer />
 					</>
