@@ -129,7 +129,7 @@ const ReceiptDetail = () => {
 										placeholder="23 Pembury Avenue, Paddonhurst"
 									/>
 									<HiOutlineLocationMarker
-										className="location_icon"
+										className="location_icon icon2"
 										color="#4A5568"
 									/>
 								</div>

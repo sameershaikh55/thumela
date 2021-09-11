@@ -49,6 +49,18 @@ html {
   }
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .page_container {
   max-width: 1150px;
   margin-left: auto;
@@ -81,6 +93,10 @@ html {
 
 .f14 {
   font-size: 14px;
+}
+
+.f28 {
+  font-size: 28px;
 }
 
 .btnBg {
@@ -1012,6 +1028,15 @@ html {
   margin-left: 25px;
 }
 
+.basketitems_container.checkout .inp_container .location_icon.icon2 {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: 15px;
+}
+
 .basketitems_container.checkout .map_container {
   margin-top: 2rem;
 }
@@ -1053,7 +1078,7 @@ html {
 }
 
 .my_order_body.receiptDetails {
-  height: 1650px;
+  height: 1610px;
   z-index: -2;
 }
 
@@ -1187,7 +1212,96 @@ html {
 /* ============================ */
 /* == IMAGE GALLERY END == */
 /* ============================ */
+.sign_in_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sign_in_container .signIn_right {
+  background: url(../assets/signin.svg);
+  background-color: #0645b2;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sign_in_container .signIn_container {
+  width: 60%;
+  background-color: #f4f9fe;
+  padding: 0rem 1rem;
+}
+
+.sign_in_container .signIn_container .inner_signIn {
+  max-width: 400px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.sign_in_container .signIn_container .inner_signIn img {
+  width: 209px;
+  height: auto;
+}
+
+.sign_in_container .signIn_container .inner_signIn h3 {
+  color: #0645b2;
+}
+
+.sign_in_container .signIn_container .inner_signIn label {
+  color: #1a2a32;
+}
+
+.sign_in_container .signIn_container .inner_signIn input {
+  border-radius: 4px;
+  background: rgba(233, 243, 253, 0.5);
+  border: 1px solid #d4dfe5;
+  height: 40px;
+  color: #4a5568;
+  padding: 0px 16px;
+  font-size: 14px;
+}
+
+.sign_in_container .signIn_container .inner_signIn input:focus {
+  outline: none;
+}
+
+.sign_in_container .signIn_container .inner_signIn .inp_password {
+  position: relative;
+  height: 100%;
+}
+
+.sign_in_container .signIn_container .inner_signIn .inp_password .eye_cont {
+  right: 20px;
+  top: 36px;
+  font-size: 18px;
+  color: #b4c8d2;
+}
+
+.sign_in_container .signIn_container .inner_signIn .share_icon:nth-child(3) {
+  color: #000000;
+}
+
+.sign_in_container .signIn_container .inner_signIn .share_icon {
+  color: #2372fd;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .sign_in_container .signIn_container {
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 998px) {
+  .sign_in_container .signIn_container .inner_signIn {
+    width: 380px;
+  }
   .hero_section img {
     width: 100%;
   }
@@ -1218,6 +1332,13 @@ html {
 }
 
 @media screen and (max-width: 768px) {
+  .sign_in_container .signIn_container {
+    width: 100%;
+    height: 100vh;
+  }
+  .sign_in_container .signIn_container .inner_signIn {
+    max-width: 380px;
+  }
   .header_container .nav_links {
     height: 40px;
     width: 100%;
@@ -1344,6 +1465,15 @@ html {
   }
   .SideBarContainer {
     width: 100%;
+  }
+  .sign_in_container .signIn_container .inner_signIn .inp_password .eye_cont {
+    top: 34px;
+  }
+  .sign_in_container .signIn_container {
+    padding: 0rem 0.5rem;
+  }
+  .sign_in_container .signIn_container .inner_signIn img {
+    width: 180px;
   }
 }
 /*# sourceMappingURL=style.css.map */
