@@ -83,6 +83,10 @@ input[type="number"] {
 	color: #0645b2;
 }
 
+.lightestGray {
+	color: #5a7e8d;
+}
+
 .f12 {
 	font-size: 12px;
 }
@@ -93,6 +97,10 @@ input[type="number"] {
 
 .f28 {
 	font-size: 28px;
+}
+
+.f48 {
+	font-size: 48px;
 }
 
 .btnBg {
@@ -109,6 +117,16 @@ input[type="number"] {
 
 .lighthCColor {
 	color: #304650;
+}
+
+.green_line {
+	background: rgb(59, 170, 111);
+	background: linear-gradient(
+		90deg,
+		rgba(59, 170, 111, 1) 53%,
+		rgba(222, 231, 235, 1) 53%
+	);
+	height: 3px;
 }
 
 .activeSidebar {
@@ -155,7 +173,38 @@ input[type="number"] {
 	border-radius: 4px;
 	font-size: 16px;
 }
+
+.btnBg4 {
+	border-radius: 4px;
+	background: #e0efff;
+	letter-spacing: -0.531474px;
+	color: #0645b2;
+}
+
+.allBorder {
+	border: 1px solid #d4dfe5;
+}
+
 // GLOBAL CLASSES END
+
+// PAGINATION START
+.pagination_container {
+	.MuiPaginationItem-page.Mui-selected {
+		background-color: rgba(35, 114, 253, 1) !important;
+		color: #fff;
+	}
+}
+// PAGINATION END
+
+// SEARCH HEADER START
+.search_container {
+	select {
+		width: 150px;
+		height: 34px;
+		padding: 0rem 0.5rem;
+	}
+}
+// SEARCH HEADER END
 
 /* ==================== SideBAR STYLING END ======================== */
 .SideBarContainer {
@@ -973,6 +1022,16 @@ input[type="number"] {
 		color: #0645b2;
 	}
 }
+
+.order_summary_container.ordered_items {
+	min-height: 1px;
+	height: 100%;
+	border-radius: 4px;
+
+	button {
+		width: 100px;
+	}
+}
 // ORDER SUMMARY END
 
 // ORDER SUMMARY CHECKOUT START
@@ -1289,6 +1348,139 @@ input[type="number"] {
 }
 // SIGN IN END
 
+// MY ORDER START
+.basketitems_container.recommend {
+	.cont_shopping {
+		background: #e0efff;
+		color: #0645b2;
+		width: 100%;
+	}
+}
+// MY ORDER END
+
+// MY PAYMENT START
+.my_order_body .payment_with_card {
+	.payment_cont {
+		border: 1px solid #d4dfe5;
+		border-radius: 4px;
+
+		.single_pay {
+			margin-top: 0.4rem;
+			border: 1px solid #b1d0ff;
+			background: rgba(233, 243, 253, 0.5);
+			height: 40px;
+			border-radius: 4px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.last {
+			border: none;
+			background: #dee7eb;
+			color: #bfd0d8;
+		}
+	}
+
+	label {
+		color: #1a2a32;
+	}
+}
+// MY PAYMENT END
+
+// TRACK ORDER START
+.my_order_body.trackOrder {
+	height: 750px;
+}
+// TRACK ORDER END
+
+// RADIO BUTTON START
+/* The container */
+.container_radio {
+	display: block;
+	position: relative;
+	padding-left: 25px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container_radio input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 18px;
+	width: 18px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container_radio:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container_radio input:checked ~ .checkmark {
+	background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container_radio input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container_radio .checkmark:after {
+	top: 5.8px;
+	left: 6.7px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: white;
+}
+// RADIO BUTTON END
+
+// PAYMENT CONFIRMATION START
+.confirmation_top {
+	button {
+		background: #2372fd;
+		border: none;
+		font-size: 17px;
+		color: white;
+		width: 305px;
+		height: 62px;
+		border-radius: 4px;
+	}
+}
+
+.my_order_body.confirmation {
+	height: 1360px;
+
+	.basketitems_container {
+		min-height: 1px;
+		height: 100%;
+	}
+}
+// PAYMENT CONFIRMATION END
+
 // MEDIA QUERIES START
 @media screen and (max-width: 1100px) {
 	.sign_in_container .signIn_container {
@@ -1297,6 +1489,9 @@ input[type="number"] {
 }
 
 @media screen and (max-width: 998px) {
+	.my_order_body.trackOrder {
+		height: 1030px;
+	}
 	.sign_in_container .signIn_container .inner_signIn {
 		width: 380px;
 	}
@@ -1327,9 +1522,21 @@ input[type="number"] {
 	.bg-page2 {
 		height: 2200px;
 	}
+	.my_order_body.ordered_items {
+		height: 1580px;
+	}
+	.f48 {
+		font-size: 40px;
+	}
+	.my_order_body.confirmation {
+		height: 2100px;
+	}
 }
 
 @media screen and (max-width: 768px) {
+	.f48 {
+		font-size: 35px;
+	}
 	.sign_in_container .signIn_container {
 		width: 100%;
 		height: 100vh;
@@ -1454,9 +1661,35 @@ input[type="number"] {
 		.image-gallery-image {
 		height: 250px;
 	}
+	.container_radio .checkmark:after {
+		left: 5.7px;
+	}
+	.my_order_body.confirmation {
+		height: 2200px;
+	}
+	.green_line {
+		background: #3baa6f;
+		background: linear-gradient(
+			180deg,
+			rgba(59, 170, 111, 1) 53%,
+			rgba(222, 231, 235, 1) 53%
+		);
+		min-height: 1px;
+		height: 240px;
+		width: 3px;
+	}
+	.search_container {
+		select {
+			width: 100%;
+			height: 32px;
+		}
+	}
 }
 
 @media screen and (max-width: 575px) {
+	.f48 {
+		font-size: 35px;
+	}
 	.feature_container {
 		.slick-slide img {
 			width: 40%;
@@ -1482,7 +1715,9 @@ input[type="number"] {
 		top: 34px;
 	}
 	.sign_in_container .signIn_container {
-		padding: 0rem 0.5rem;
+		background: url(../assets/signin.svg);
+		background-color: #0645b2;
+		padding: 0rem;
 	}
 	.sign_in_container .signIn_container .inner_signIn img {
 		width: 180px;

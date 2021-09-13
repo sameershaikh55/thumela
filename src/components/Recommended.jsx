@@ -4,7 +4,7 @@ import React from "react";
 import Slider from "react-slick";
 import FeatureCard from "./FeatureCard";
 
-const Recommend = () => {
+const Recommend = ({ frequently }) => {
 	var settings = {
 		dots: true,
 		infinite: true,
@@ -39,10 +39,17 @@ const Recommend = () => {
 				<div className="page_container">
 					<div className="container-fluid">
 						<div className="d-flex justify-content-between">
-							<h4 className="middleBlueC fw-bold">
-								<span className="bottomLine pb-1">Reco</span>
-								mmended for you
-							</h4>
+							{(!frequently && (
+								<h4 className="middleBlueC fw-bold">
+									<span className="bottomLine pb-1">Reco</span>
+									mmended for you
+								</h4>
+							)) || (
+								<h4 className="middleBlueC fw-bold">
+									<span className="bottomLine pb-1">Freq</span>
+									uently Bought Hamper
+								</h4>
+							)}
 						</div>
 					</div>
 				</div>

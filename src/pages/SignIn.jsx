@@ -4,7 +4,7 @@ import SignUpForm from "../components/SignUpForm";
 const SignIn = () => {
 	return (
 		<div className="sign_in_container">
-			<div className="signIn_container d-flex justify-content-center align-items-center">
+			<div className="signIn_container d-flex justify-content-center align-items-start align-items-md-center">
 				<SignUpForm />
 			</div>
 			<div className="signIn_right d-none d-md-block"></div>

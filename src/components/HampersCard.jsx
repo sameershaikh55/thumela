@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import product from "../assets/product.svg";
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
-const HampersCard = () => {
+const HampersCard = ({ results }) => {
 	const [changeInp, setChangeInp] = useState(0);
 
 	const increase = () => {
@@ -20,7 +20,7 @@ const HampersCard = () => {
 	};
 
 	return (
-		<div className="col-4">
+		<div className={`${(results && "col-3") || "col-4"}`}>
 			<div className="hamper_card pb-3 rounded-3">
 				<div className="text-center my-4">
 					<img src={product} alt="" />

@@ -15,14 +15,14 @@ const SignUpForm = () => {
 						<span className="bottomLine pb-1">Sig</span>n in
 					</h3>
 					<p className="d-flex flex-column flex-sm-row f14 fw500 mb-0">
-						Don’t have an account?{" "}
+						Don’t have an account?{"  "}&nbsp;
 						<Link className="blueC" to="">
 							Create your account here
 						</Link>
 					</p>
 
 					<div className="col-12 mt-4">
-						<label className="f14 fw500" htmlFor="Email address">
+						<label className="f14 fw600" htmlFor="Email address">
 							Email address
 						</label>
 						<br />
@@ -33,7 +33,7 @@ const SignUpForm = () => {
 						/>
 					</div>
 					<div className="inp_password col-12 mt-4">
-						<label className="f14 fw500" htmlFor="Password">
+						<label className="f14 fw600" htmlFor="Password">
 							Password
 						</label>
 						<br />
@@ -41,11 +41,11 @@ const SignUpForm = () => {
 						<BsEyeFill className="eye_cont position-absolute" />
 					</div>
 					<div className="col-12 d-flex align-items-center justify-content-between mt-4">
-						<div className="d-flex align-items-center">
+						<div className="d-flex f14 align-items-center">
 							<input type="checkbox" className="me-2" />
 							<span className="lighthCColor">Remember me</span>
 						</div>
-						<Link className="blueC" to="">
+						<Link className="blueC f14" to="">
 							Forgot your password?
 						</Link>
 					</div>

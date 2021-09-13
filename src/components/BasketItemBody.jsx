@@ -3,7 +3,7 @@ import product from "../assets/product.svg";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
-const BasketItemBody = () => {
+const BasketItemBody = ({ rec }) => {
 	const [changeInp, setChangeInp] = useState(0);
 
 	const increase = () => {
@@ -23,11 +23,11 @@ const BasketItemBody = () => {
 			<hr className="hrBg my-4" />
 			<div className="mainDiv d-flex justify-content-between cart">
 				<div className="first d-flex">
-					<div className="img_container">
+					<div style={{ border: rec && "none" }} className="img_container">
 						<img className="product" src={product} alt="" />
 					</div>
 					<div className="d-flex flex-column justify-content-between h-100 ms-3">
-						<p className="mb-0">
+						<p className={`mb-0 ${rec && "f14"}`}>
 							Douwe Egberts Instant Coffee Pure Gold Medium Roast - 200g Jar
 						</p>
 						<div className="quantity_cont">
@@ -53,7 +53,7 @@ const BasketItemBody = () => {
 				</div>
 				<div className="second ps-0 h-100">
 					<div className="d-flex flex-column h-100 w-100 justify-content-between align-items-end">
-						<h6 className="fw600 mb-0">R1000.00</h6>
+						<h6 className={`fw600 mb-0 ${rec && "f12"}`}>R1000.00</h6>
 						<div>
 							<RiDeleteBin6Line fontSize="1.4rem" />
 						</div>

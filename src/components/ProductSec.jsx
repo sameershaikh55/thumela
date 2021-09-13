@@ -3,8 +3,9 @@ import ImageGalleryC from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import product from "../assets/product.svg";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { GoPrimitiveDot } from "react-icons/go";
 
-const ProductGallery = () => {
+const GallerySec = () => {
 	const images = [
 		{
 			original: product,
@@ -49,7 +50,7 @@ const ProductGallery = () => {
 							/>
 						</div>
 					</div>
-					<div className="col-12 col-md-8 mt-5">
+					<div className="col-12 d-flex flex-column justify-content-between col-md-8 mt-5">
 						<div>
 							<h2 className="middleBlueC fw-bold">
 								<span className="bottomLine">Delu</span>x Hamper
@@ -60,26 +61,13 @@ const ProductGallery = () => {
 							</p>
 						</div>
 
-						<div className="row delux_product">
-							{[1, 1, 1, 1, 1, 1, 1, 1, 1].map((prev, i) => {
+						<div className="row">
+							{[1, 1, 1, 1, 1, 1, 1, 1].map((prev, i) => {
 								return (
-									<div className="col-12 inner_delux">
+									<div className="col-6 inner_delux">
 										<div className="row align-items-center">
-											<div className="col-3 col-md-2 ps-0 text-center">
-												<img src={product} alt="" />
-											</div>
-											<div className="col-9 col-md-10 ps-0">
-												<div className="d-flex w-100 justify-content-between">
-													<div>
-														<h6 className="fw-light mb-0 f14">
-															Douwe Egberts Instant Coffee Pure
-														</h6>
-														<p className="blueC f14 fw-bold mb-0">
-															UNIT PRICE: 3.00
-														</p>
-													</div>
-													<h6 className="f14 fw600 mb-0">5 UNITS</h6>
-												</div>
+											<div className="mt-3">
+												<GoPrimitiveDot /> Lorem, ipsum.
 											</div>
 										</div>
 									</div>
@@ -87,7 +75,11 @@ const ProductGallery = () => {
 							})}
 						</div>
 
-						<div className="d-flex align-items-center mt-3">
+						<div className="mt-5">
+							<h1>$100</h1>
+						</div>
+
+						<div className="d-flex align-items-center mt-4">
 							<div className="quantity_cont bg-white rounded-3 py-2 px-3">
 								<button onClick={decrease} className="border-0 bg-transparent">
 									<AiOutlineMinus />
@@ -121,4 +113,4 @@ const ProductGallery = () => {
 	);
 };
 
-export default ProductGallery;
+export default GallerySec;
